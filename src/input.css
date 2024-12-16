@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,
+    body {
+      height: -webkit-fill-available;
+      overflow-x: hidden;
+      direction: rtl;
+    }
+    body {
+      @apply bg-[#14141E] ;
+    }
+    main {
+      @apply flex flex-col gap-y-12 md:mt-12 mt-9;
+    }
+    input:focus {
+      box-shadow: none !important;
+    }
+    .swal2-container.swal2-rtl.swal2-center.swal2-backdrop-show {
+      background: red !important;
+      @apply bg-red-600;
+    }
+    /* zoom */
+    @media screen and (min-width: 1400px) {
+      html {
+        zoom: 0.8;
+      }
+    }
+  
+    /*  */
+  
+    
+  }
+
+@layer components {
+
+ /* table */
+ .public__table {
+    @apply w-full text-sm text-left rtl:text-right  text-gray-100;
+  }
+  .public__table thead {
+    @apply text-lg  uppercase  bg-blue-primary/20 text-gray-300;
+  }
+  .public__table thead th {
+    @apply px-6 py-3 text-center;
+  }
+  .public__table tbody tr {
+    @apply text-base text-center border-b border-gray-700;
+  }
+  .public__table tbody tr:last-of-type {
+    @apply border-b-0;
+  }
+  .public__table tbody tr th {
+    @apply px-6 py-4 font-medium  whitespace-nowrap text-white;
+  }
+  .public__table tr .attention {
+    @apply bg-emerald-700 text-white;
+  }
+  .public__table tr .no__attention {
+    @apply bg-red-600 text-white;
+  }
+  .public__table .remove,
+  .public__table .reject,
+  .public__table .ban {
+    @apply px-4 py-2 rounded-lg text-white bg-red-600 hover:bg-red-700;
+  }
+  .public__table .reject,
+  .public__table .ban {
+    @apply bg-red-800 hover:bg-red-900;
+  }
+  .public__table .edit,
+
+  .public__table .answer,
+  .public__table .accept {
+    @apply px-4 py-2 rounded-lg text-white bg-blue-primary/90 hover:bg-blue-primary;
+  }  
+  .public__table .view,
+  .public__table .location,
+  .public__table .doc
+  {
+    @apply flex justify-center
+  }
+svg{
+    width: 23px;
+    height: 23px;
+}
+/* swal */
+
+.contain-input-swal input,
+.contain-input-swal textarea {
+  @apply  sm:text-lg text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500;
+}
+.contain-input-swal textarea {
+  height: 130px !important;
+  padding-top: 1rem !important;
+}
+.swal2-confirm{
+  background-color: #7066e0 !important;
+}
+.contain-input-swal {
+    @apply mb-6;
+  }
+  .contain-input-swal input,
+  .contain-input-swal textarea {
+    @apply w-[-webkit-fill-available] mt-2;
+  }
+
+
+  
+}  

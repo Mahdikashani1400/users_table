@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./sweet-alert.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="overflow-x-auto rounded-md bg-gray-800 shadow-main">
+                <h4 class="font-bold text-xl my-5 px-4 text-white">
+                    لیست <span class="text-blue-primary">کاربران</span>
+                </h4>
+                <table class="public__table users__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">شماره</th>
+                            <th scope="col">نام</th>
+                            <th scope="col">نام خانوادگی</th>
+                            <th scope="col">کد ملی</th>
+                            <th scope="col">مشاهده</th>
+                            <th scope="col">موقعیت</th>
+                            <th scope="col">ویرایش</th>
+                            <th scope="col">حذف</th>
+                            <th scope="col">سوابق</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be injected here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./app.js" type="module"></script>
+</body>
+
+</html>
